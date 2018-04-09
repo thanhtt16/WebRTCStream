@@ -9,15 +9,7 @@
     <h1>Demo web rtc</h1>
     <video id="localStream" width="300" controls></video>
 </body>
-<script>
-    navigator.mediaDevices.getUserMedia({ audio: false, video: true })
-        .then(stream => {
-            console.log(stream);
-            var video = document.getElementById('localStream');
-            video.srcObject = stream;
-            video.onloadedmetadata = () => video.play();
-        })
-        .catch(error => console.log(error));
-</script>
+
+<script src="bundle.js"></script>
 
 </html>
